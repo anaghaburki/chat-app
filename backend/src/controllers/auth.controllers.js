@@ -20,7 +20,7 @@ export const signup = async (req,res) =>{
 
         const user = await User.findOne({email})
 
-        if (user) return res.status(400),json({message: "mail already exists"});
+        if (user) return res.status(400).json({message: "mail already exists"});
 
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(password,salt)
@@ -68,7 +68,7 @@ export const login = async(req,res) =>{
             return res.status(400).json({message: "Invalid Credentials"})
         }
 
-        generateToken(user._is, res)
+        generateToken(user._id, res)
         res.status(200).json({
             _id:user._id,
             fullName:user.fullName,
@@ -76,7 +76,7 @@ export const login = async(req,res) =>{
             profilePic: user.profilePic,
         })
 
-    } catch{
+    } catch (error) {
         console.log("Error in login controller", error.message);
         res.status(500).json({msg: 'Internal Server Error'});
 
@@ -88,7 +88,7 @@ export const logout = (req,res) =>{
         res.cookie("jwt","",{maxAge:0})
         res.status(200).json({message: "Logged out successfully"});
 
-    } catch {
+    } catch (error) {
         console.log("Error in logout controller", error.message);
         res.status(500).json({msg: 'Internal Server Error'});
 
@@ -120,7 +120,7 @@ export const updateProfile = async(req,res) => {
 export const checkAuth = (req,res) => {
     try {
         res.status(200).json(req.user);
-        } catch {
+        } catch (error)  {
             console.log("Error in checkAuth controller", error.message);
             res.status(500).json({msg: 'Internal Server Error'});
     }
