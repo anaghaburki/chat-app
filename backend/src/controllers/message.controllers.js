@@ -26,10 +26,11 @@ export const getMessages = async(req,res)=> {
 
         const messages = await Message.find({
             $or:[
-                {senderId:myId, recipientId:userToChatId},
-                {senderId:userToChatId, recipientId:myId}
+                { senderId: myId, recieverId: userToChatId },
+                { senderId: userToChatId, recieverId: myId }
             ]
-        })
+        });
+        
 
 
         res.status(200).json(messages)
@@ -56,14 +57,14 @@ export const sendMessage = async (req, res) => {
 
         const newMessage = new Message({
             senderId,
-            recipientId,
+            recieverId: recipientId,
             text,
             image: imageUrl,
         });
 
         await newMessage.save();
 
-        const receiverSocketId = getReceiverSocketId(receiverId);
+        const receiverSocketId = getReceiverSocketId(recipientId);
         if (receiverSocketId) {
           io.to(receiverSocketId).emit("newMessage", newMessage);
         }
