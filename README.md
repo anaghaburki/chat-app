@@ -1,68 +1,71 @@
-Chatty – Realtime Chat Application
-Chatty is a full-stack real-time chat application built using modern web technologies. It offers instant messaging, media sharing, live user presence, theme support, and secure authentication. Designed with scalability, responsiveness, and performance in mind, Chatty enables smooth 1-on-1 conversations using WebSockets and JWT for secure sessions.
+# Chatty – Realtime Chat Application
 
-Tech Stack
-Frontend:
-ReactJS with Vite
+Chatty is a full-stack real-time chat application built using modern web technologies.  
+It provides instant messaging, media sharing, live user presence, theme switching, and secure authentication.  
+Designed with scalability and responsiveness in mind, Chatty enables seamless one-on-one conversations using WebSockets and JSON Web Tokens (JWT).
 
-Tailwind CSS for utility-first styling
+## Tech Stack
 
-Zustand for state management
+### Frontend
+- ReactJS with Vite  
+- Tailwind CSS for styling  
+- Zustand for state management  
+- Socket.io Client for real-time communication  
+- JWT for token-based authentication  
 
-Socket.io Client for real-time messaging
+### Backend
+- Node.js with Express.js  
+- MongoDB for data storage  
+- Socket.io Server for WebSocket communication  
+- JWT for user session handling
 
-JWT (WebTokens) for authentication
+## Features
 
-Backend:
-Node.js with Express.js
+- Realtime one-on-one messaging  
+- Image and media upload support  
+- Light and dark theme toggle  
+- Secure authentication using JWT  
+- Live online/offline user presence indicator  
+- Fully responsive user interface  
+- Persistent message history using MongoDB  
 
-MongoDB for data storage
+## Getting Started
 
-Socket.io Server for event-based communication
+### 1. Clone the Repository
 
-JWT for user session security
-
-Features
-Real-time 1-on-1 messaging
-
-Image/media uploads
-
-Theme toggle: light and dark mode
-
-Token-based user authentication
-
-Live online/offline user status
-
-Responsive design
-
-Message history with persistent storage
-
-Getting Started
-1. Clone the repository
 git clone https://github.com/anaghaburki/chat-app.git
 cd chat-app
 
-2. Set up the frontend
-cd client
-npm install
-npm run dev
-Ensure your .env file in client/ contains:
+### 2. Setup Frontend
+
+cd client  
+npm install  
+npm run dev  
+
+Create a `.env` file inside the client directory with the following:
+
 VITE_API_URL=http://localhost:5000
 
-3. Set up the backend
-cd server
-npm install
-npm run dev
-Your .env file in server/ should include:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
+### 3. Setup Backend
+
+cd server  
+npm install  
+npm run dev  
+
+Create a `.env` file inside the server directory with the following:
+
+PORT=5000  
+MONGO_URI=your_mongodb_connection_string  
 JWT_SECRET=your_secret_key
 
-License
-This project is licensed under the MIT License.
+## License
 
-Author
-Anagha Burki S
-Email: anagha.burki@gmail.com
-GitHub: anaghaburki
-LinkedIn: anagha-burki
+This project is licensed under the MIT License.  
+See the LICENSE file for more details.
+
+## Author
+
+Anagha Burki S  
+Email: anagha.burki@gmail.com  
+GitHub: https://github.com/anaghaburki  
+LinkedIn: https://www.linkedin.com/in/anagha-burki
