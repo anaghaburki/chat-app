@@ -69,3 +69,14 @@ Anagha Burki S
 Email: anagha.burki@gmail.com  
 GitHub: https://github.com/anaghaburki  
 LinkedIn: https://www.linkedin.com/in/anagha-burki
+
+![image](https://github.com/user-attachments/assets/e8c50ac6-c1f8-4610-8e7d-a907a6a0400b)
+![image](https://github.com/user-attachments/assets/84302d93-96b5-46c3-a0af-7661cd24eb9f)
+![image](https://github.com/user-attachments/assets/31475044-a07d-4881-986e-3f454c68e538)
+![image](https://github.com/user-attachments/assets/868f516f-ec21-48fb-8627-d8288565e7d5)
+![image](https://github.com/user-attachments/assets/5b81577d-61fc-4b38-aa77-91c48bb66ba2)
+
+
+
+
+
